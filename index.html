@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alex Delarge | Fotografía • Filmmaking • Diseño</title>
+<title>Alex Delarge</title>
 
 <style>
 
@@ -22,12 +22,14 @@ scroll-behavior:smooth;
 
 body{
 background:#050505;
-color:#ffffff;
+color:white;
 font-family:Arial, Helvetica, sans-serif;
 overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* =========================
+   MENÚ
+========================= */
 
 nav{
 
@@ -46,7 +48,7 @@ align-items:center;
 background:rgba(0,0,0,.25);
 backdrop-filter:blur(12px);
 
-z-index:1000;
+z-index:999;
 
 }
 
@@ -66,9 +68,7 @@ font-size:.8rem;
 letter-spacing:3px;
 text-transform:uppercase;
 
-font-weight:300;
-
-transition:.4s;
+transition:.3s;
 
 }
 
@@ -78,7 +78,9 @@ opacity:.5;
 
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 
@@ -99,7 +101,7 @@ display:flex;
 justify-content:center;
 align-items:flex-start;
 
-padding: top 5px;vh;
+padding-top:5vh;
 
 position:relative;
 
@@ -112,11 +114,15 @@ text-align:center;
 width:700px;
 max-width:85%;
 
-filter:drop-shadow(0 15px 35px rgba(0,0,0,.6));
+filter:drop-shadow(
+0 15px 35px rgba(0,0,0,.6)
+);
 
 }
 
-/* SCROLL INDICATOR */
+/* =========================
+   FLECHA
+========================= */
 
 .scroll-indicator{
 
@@ -151,7 +157,9 @@ transform:translate(-50%,-5px);
 
 }
 
-/* SECTIONS */
+/* =========================
+   SECCIONES
+========================= */
 
 .section{
 
@@ -161,19 +169,23 @@ padding:120px 10%;
 
 .section h2{
 
-font-size:2.2rem;
-font-weight:300;
+text-align:center;
+
+font-size:2rem;
 
 letter-spacing:5px;
+
+font-weight:300;
+
 text-transform:uppercase;
 
 margin-bottom:60px;
 
-text-align:center;
-
 }
 
-/* ABOUT */
+/* =========================
+   SOBRE MI
+========================= */
 
 .about{
 
@@ -183,15 +195,17 @@ margin:auto;
 
 text-align:center;
 
-font-size:1.1rem;
-
 line-height:2;
+
+font-size:1.1rem;
 
 color:#d0d0d0;
 
 }
 
-/* GALLERY */
+/* =========================
+   GALERÍA
+========================= */
 
 .gallery{
 
@@ -211,7 +225,7 @@ height:650px;
 
 object-fit:cover;
 
-transition:.6s;
+transition:.5s;
 
 cursor:pointer;
 
@@ -223,15 +237,17 @@ transform:scale(1.03);
 
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
 padding:80px 20px;
 
-border-top:1px solid #1b1b1b;
-
 text-align:center;
+
+border-top:1px solid #1a1a1a;
 
 }
 
@@ -244,6 +260,7 @@ margin-bottom:15px;
 footer a{
 
 color:white;
+
 text-decoration:none;
 
 }
@@ -254,7 +271,9 @@ opacity:.6;
 
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
@@ -267,7 +286,9 @@ padding:20px;
 .menu{
 
 gap:20px;
+
 flex-wrap:wrap;
+
 justify-content:center;
 
 }
@@ -275,12 +296,6 @@ justify-content:center;
 .menu a{
 
 font-size:.7rem;
-
-}
-
-.hero{
-
-padding-top:18vh;
 
 }
 
@@ -330,13 +345,11 @@ padding:80px 7%;
 
 <img
 src="assets/logo/logob.png"
-class="hero-logo"
-alt="Alex Delarge">
+alt="Alex Delarge"
+class="hero-logo">
 
 <div class="scroll-indicator">
-
 ↓
-
 </div>
 
 </section>
@@ -371,12 +384,12 @@ id="fotografia">
 
 <div class="gallery">
 
-<img src="assets/photos/r1.jpg" alt="">
-<img src="assets/photos/r2.jpg" alt="">
-<img src="assets/photos/r3.jpg" alt="">
-<img src="assets/photos/r4.jpg" alt="">
-<img src="assets/photos/r5.jpg" alt="">
-<img src="assets/photos/r6.jpg" alt="">
+<img src="assets/photos/r1.jpg">
+<img src="assets/photos/r2.jpg">
+<img src="assets/photos/r3.jpg">
+<img src="assets/photos/r4.jpg">
+<img src="assets/photos/r5.jpg">
+<img src="assets/photos/r6.jpg">
 
 </div>
 
@@ -388,9 +401,7 @@ id="fotografia">
 
 Instagram:
 
-<a
-href="https://instagram.com/alex_delarge.ph"
-target="_blank">
+<a href="https://instagram.com/alex_delarge.ph" target="_blank">
 
 @alex_delarge.ph
 
