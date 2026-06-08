@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alex Delarge | Fotógrafo y Filmmaker</title>
+<title>Alex Delarge</title>
 
 <style>
 
@@ -14,48 +16,66 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#050505;
 color:white;
 font-family:Arial, Helvetica, sans-serif;
+overflow-x:hidden;
 }
+
+/* MENU */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-padding:20px 60px;
+padding:25px 60px;
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-background:rgba(0,0,0,.5);
+background:rgba(0,0,0,.35);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.logo{
-height:45px;
-}
-
 .menu{
 display:flex;
-gap:30px;
+gap:40px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 font-size:.95rem;
-letter-spacing:1px;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.3s;
 }
+
+.menu a:hover{
+opacity:.6;
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
+
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.65)
+),
 url("assets/photos/portada.jpg");
+
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+
 display:flex;
 justify-content:center;
 align-items:center;
@@ -63,78 +83,79 @@ text-align:center;
 padding:20px;
 }
 
-.hero-content h1{
-font-size:5rem;
-letter-spacing:8px;
-margin-bottom:15px;
+.hero-logo{
+width:420px;
+max-width:80%;
 }
 
-.hero-content p{
-font-size:1.2rem;
-color:#d0d0d0;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-border:1px solid white;
-color:white;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn:hover{
-background:white;
-color:black;
-}
+/* SECCIONES */
 
 .section{
-padding:100px 10%;
+padding:120px 10%;
 }
 
 .section h2{
-font-size:2.5rem;
-margin-bottom:50px;
+font-size:2.4rem;
+font-weight:300;
+letter-spacing:4px;
+margin-bottom:60px;
 text-align:center;
+text-transform:uppercase;
 }
+
+/* SOBRE MI */
+
+.about{
+max-width:850px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+font-size:1.1rem;
+color:#cfcfcf;
+}
+
+/* GALERIA */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:20px;
 }
 
 .gallery img{
 width:100%;
-height:420px;
+height:500px;
 object-fit:cover;
-transition:.4s;
+transition:.5s;
+cursor:pointer;
 }
 
 .gallery img:hover{
 transform:scale(1.03);
 }
 
-.about{
-max-width:900px;
-margin:auto;
-text-align:center;
-line-height:1.8;
-font-size:1.1rem;
-color:#cfcfcf;
-}
+/* FOOTER */
 
 footer{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
-border-top:1px solid #222;
+border-top:1px solid #1d1d1d;
+}
+
+footer p{
+margin-bottom:15px;
 }
 
 footer a{
 color:white;
 text-decoration:none;
 }
+
+footer a:hover{
+opacity:.6;
+}
+
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -143,33 +164,41 @@ padding:20px;
 }
 
 .menu{
-gap:15px;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.menu a{
 font-size:.8rem;
 }
 
-.hero-content h1{
-font-size:2.8rem;
-letter-spacing:3px;
+.hero-logo{
+width:260px;
+}
+
+.section{
+padding:80px 7%;
 }
 
 .gallery img{
-height:300px;
+height:320px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
 
-<img src="assets/logo/logob.png" class="logo">
-
 <div class="menu">
 <a href="#fotografia">Fotografía</a>
-<a href="#sobre-mi">Sobre mí</a>
+<a href="filmmaking.html">Filmmaking</a>
+<a href="diseno.html">Diseño</a>
 <a href="#contacto">Contacto</a>
 </div>
 
@@ -177,17 +206,25 @@ height:300px;
 
 <section class="hero">
 
-<div class="hero-content">
+<img src="assets/logo/logob.png" class="hero-logo">
 
-<h1>ALEX DELARGE</h1>
+</section>
+
+<section class="section" id="sobre-mi">
+
+<h2>Sobre mí</h2>
+
+<div class="about">
 
 <p>
-Fotografía • Filmmaking • Diseño Gráfico
+Soy Alex Delarge, fotógrafo, filmmaker y diseñador gráfico radicado en Quito, Ecuador.
 </p>
 
-<a href="#fotografia" class="btn">
-Ver Portafolio
-</a>
+<br>
+
+<p>
+Mi trabajo se enfoca en la creación de imágenes y contenido visual con una estética cinematográfica, combinando fotografía, producción audiovisual y diseño para proyectos comerciales, creativos y de marca.
+</p>
 
 </div>
 
@@ -210,27 +247,6 @@ Ver Portafolio
 
 </section>
 
-<section class="section" id="sobre-mi">
-
-<h2>Sobre mí</h2>
-
-<div class="about">
-
-<p>
-
-Soy Alex Delarge, fotógrafo, filmmaker y diseñador gráfico
-radicado en Quito, Ecuador.
-
-Me especializo en retrato, fotografía de eventos,
-producción audiovisual, videos para redes sociales,
-edición de video y diseño gráfico.
-
-</p>
-
-</div>
-
-</section>
-
 <footer id="contacto">
 
 <p>
@@ -240,13 +256,16 @@ Instagram:
 </a>
 </p>
 
-<br>
-
 <p>
 alex.slash182@gmail.com
+</p>
+
+<p>
+Quito · Ecuador
 </p>
 
 </footer>
 
 </body>
+
 </html>
