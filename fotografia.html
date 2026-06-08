@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alex Delarge | Fotografía • Filmmaking • Diseño</title>
+<title>Fotografía | Alex Delarge</title>
 
 <style>
 
@@ -16,360 +16,173 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 background:#050505;
 color:white;
 font-family:Arial, Helvetica, sans-serif;
-overflow-x:hidden;
 }
 
-/* =========================
-   MENÚ
-========================= */
+/* HEADER */
 
-nav{
+header{
 
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-
-padding:18px 40px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-background:rgba(0,0,0,.25);
-backdrop-filter:blur(12px);
-
-z-index:999;
-
-}
-
-.nav-logo img{
-
-height:42px;
-width:auto;
-
-opacity:.9;
-
-transition:.3s;
-
-}
-
-.nav-logo img:hover{
-
-opacity:1;
-
-}
-
-.menu{
-
-display:flex;
-align-items:center;
-gap:35px;
-
-}
-
-.menu a{
-
-color:white;
-text-decoration:none;
-
-font-size:.75rem;
-letter-spacing:3px;
-text-transform:uppercase;
-
-transition:.3s;
-
-}
-
-.menu a:hover{
-
-opacity:.5;
-
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-height:100vh;
+height:50vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.20),
-rgba(0,0,0,.75)
+rgba(0,0,0,.3),
+rgba(0,0,0,.7)
 ),
 url("assets/photos/portada.jpg");
 
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 
 display:flex;
 justify-content:center;
-align-items:flex-start;
-
-padding-top:2vh;
-
-position:relative;
-
-text-align:center;
+align-items:center;
 
 }
 
-.hero-logo{
+header h1{
 
-width:500px;
-max-width:80%;
-
-filter:drop-shadow(
-0 15px 35px rgba(0,0,0,.6)
-);
-
-}
-
-/* =========================
-   FLECHA SCROLL
-========================= */
-
-.scroll-indicator{
-
-position:absolute;
-
-bottom:40px;
-left:50%;
-
-transform:translateX(-50%);
-
-font-size:2rem;
-
-opacity:.6;
-
-animation:bounce 2s infinite;
-
-}
-
-@keyframes bounce{
-
-0%,20%,50%,80%,100%{
-transform:translate(-50%,0);
-}
-
-40%{
-transform:translate(-50%,-10px);
-}
-
-60%{
-transform:translate(-50%,-5px);
-}
-
-}
-
-/* =========================
-   SECCIONES
-========================= */
-
-.section{
-
-padding:120px 10%;
-
-}
-
-.section h2{
-
-text-align:center;
-
-font-size:2rem;
+font-size:3rem;
 font-weight:300;
+letter-spacing:8px;
+text-transform:uppercase;
 
-letter-spacing:5px;
+}
+
+/* MENU */
+
+.menu{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:25px;
+
+display:flex;
+justify-content:center;
+
+background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(12px);
+
+z-index:1000;
+
+}
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:3px;
+
+font-size:.8rem;
 
 text-transform:uppercase;
 
-margin-bottom:60px;
-
 }
 
-/* =========================
-   SOBRE MI
-========================= */
-
-.about{
-
-max-width:850px;
-
-margin:auto;
-
-text-align:center;
-
-line-height:2;
-
-font-size:1.1rem;
-
-color:#d0d0d0;
-
-}
-
-/* =========================
-   GALERÍA
-========================= */
+/* GALERIA */
 
 .gallery{
 
-display:grid;
+padding:80px 8%;
 
-grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
-
-gap:25px;
+column-count:3;
+column-gap:20px;
 
 }
 
 .gallery img{
 
 width:100%;
-height:650px;
 
-object-fit:cover;
-
-transition:.5s;
+margin-bottom:20px;
 
 cursor:pointer;
+
+transition:.4s;
+
+break-inside:avoid;
 
 }
 
 .gallery img:hover{
 
-transform:scale(1.03);
+opacity:.85;
+
+transform:scale(1.01);
 
 }
 
-/* =========================
-   BOTÓN PORTAFOLIO
-========================= */
+/* LIGHTBOX */
 
-.portfolio-link{
+.lightbox{
 
-margin-top:60px;
-text-align:center;
+display:none;
 
-}
+position:fixed;
 
-.portfolio-link a{
+top:0;
+left:0;
 
-color:white;
-text-decoration:none;
+width:100%;
+height:100%;
 
-letter-spacing:3px;
-font-size:.8rem;
+background:rgba(0,0,0,.95);
 
-text-transform:uppercase;
+justify-content:center;
+align-items:center;
 
-border:1px solid rgba(255,255,255,.25);
-
-padding:18px 28px;
-
-transition:.3s;
+z-index:9999;
 
 }
 
-.portfolio-link a:hover{
+.lightbox img{
 
-background:white;
-color:black;
-
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-padding:80px 20px;
-
-text-align:center;
-
-border-top:1px solid #1a1a1a;
+max-width:90%;
+max-height:90%;
 
 }
 
-footer p{
+.lightbox.active{
 
-margin-bottom:15px;
-
-}
-
-footer a{
-
-color:white;
-text-decoration:none;
+display:flex;
 
 }
 
-footer a:hover{
+/* MOBILE */
 
-opacity:.6;
+@media(max-width:900px){
 
-}
+.gallery{
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-nav{
-
-padding:15px 20px;
+column-count:2;
 
 }
 
-.nav-logo img{
+}
 
-height:30px;
+@media(max-width:600px){
+
+.gallery{
+
+column-count:1;
 
 }
 
-.menu{
+header h1{
 
-gap:15px;
-flex-wrap:wrap;
-justify-content:flex-end;
-
-}
-
-.menu a{
-
-font-size:.65rem;
-
-}
-
-.hero-logo{
-
-width:280px;
-
-}
-
-.gallery img{
-
-height:350px;
-
-}
-
-.section{
-
-padding:80px 7%;
+font-size:2rem;
 
 }
 
@@ -381,108 +194,94 @@ padding:80px 7%;
 
 <body>
 
-<nav>
-
-<a href="index.html" class="nav-logo">
-<img src="assets/logo/logob.png" alt="Alex Delarge">
-</a>
-
 <div class="menu">
 
-<a href="#fotografia">Fotografía</a>
-<a href="filmmaking.html">Filmmaking</a>
-<a href="diseno.html">Diseño</a>
-<a href="#sobre-mi">Sobre mí</a>
-<a href="#contacto">Contacto</a>
+<a href="index.html">
+← Volver al inicio
+</a>
 
 </div>
 
-</nav>
+<header>
 
-<section class="hero">
+<h1>Fotografía</h1>
 
-<img
-src="assets/logo/logob.png"
-alt="Alex Delarge"
-class="hero-logo">
-
-<div class="scroll-indicator">
-↓
-</div>
-
-</section>
-
-<section
-class="section"
-id="sobre-mi">
-
-<h2>Sobre mí</h2>
-
-<div class="about">
-
-<p>
-Fotógrafo, filmmaker y diseñador gráfico radicado en Quito, Ecuador.
-</p>
-
-<br>
-
-<p>
-Especializado en retrato, fotografía comercial, producción audiovisual, contenido para redes sociales y comunicación visual para marcas, empresas y proyectos creativos.
-</p>
-
-</div>
-
-</section>
-
-<section
-class="section"
-id="fotografia">
-
-<h2>Fotografía</h2>
+</header>
 
 <div class="gallery">
 
-<img src="assets/photos/r9.jpg">
-<img src="assets/photos/r28.jpg">
+<img src="assets/photos/r1.jpg">
+<img src="assets/photos/r2.jpg">
+<img src="assets/photos/r3.jpg">
 <img src="assets/photos/r4.jpg">
+<img src="assets/photos/r5.jpg">
+<img src="assets/photos/r6.jpg">
+<img src="assets/photos/r7.jpg">
+<img src="assets/photos/r8.jpg">
+<img src="assets/photos/r9.jpg">
 <img src="assets/photos/r10.jpg">
+<img src="assets/photos/r11.jpg">
+<img src="assets/photos/r12.jpg">
+<img src="assets/photos/r13.jpg">
 <img src="assets/photos/r14.jpg">
+<img src="assets/photos/r15.jpg">
+<img src="assets/photos/r16.jpg">
+<img src="assets/photos/r17.jpg">
+<img src="assets/photos/r18.jpg">
+<img src="assets/photos/r19.jpg">
+<img src="assets/photos/r20.jpg">
 <img src="assets/photos/r21.jpg">
+<img src="assets/photos/r22.jpg">
+<img src="assets/photos/r23.jpg">
+<img src="assets/photos/r24.jpg">
+<img src="assets/photos/r25.jpg">
+<img src="assets/photos/r26.jpg">
+<img src="assets/photos/r27.jpg">
+<img src="assets/photos/r28.jpg">
+<img src="assets/photos/r29.jpg">
+<img src="assets/photos/r30.jpg">
+<img src="assets/photos/r31.jpg">
 <img src="assets/photos/r32.jpg">
 <img src="assets/photos/r33.jpg">
-<img src="assets/photos/r11.jpg">
-<img src="assets/photos/r18.jpg">
 
 </div>
 
-<div class="portfolio-link">
+<div class="lightbox" id="lightbox">
 
-<a href="fotografia.html">
-VER PORTAFOLIO COMPLETO →
-</a>
+<img id="lightbox-img">
 
 </div>
 
-</section>
+<script>
 
-<footer id="contacto">
+const images =
+document.querySelectorAll('.gallery img');
 
-<p>
-Instagram:
-<a href="https://instagram.com/alex_delarge.ph" target="_blank">
-@alex_delarge.ph
-</a>
-</p>
+const lightbox =
+document.getElementById('lightbox');
 
-<p>
-alex.slash182@gmail.com
-</p>
+const lightboxImg =
+document.getElementById('lightbox-img');
 
-<p>
-Quito · Ecuador
-</p>
+images.forEach(img => {
 
-</footer>
+img.addEventListener('click', () => {
+
+lightbox.classList.add('active');
+
+lightboxImg.src = img.src;
+
+});
+
+});
+
+lightbox.addEventListener('click', () => {
+
+lightbox.classList.remove('active');
+
+});
+
+</script>
 
 </body>
 
