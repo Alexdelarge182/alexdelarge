@@ -142,6 +142,11 @@ transition:.3s;
 
 background:white;
 color:black;
+.filter-btn.active{
+
+background:white;
+color:black;
+
 
 }
 
@@ -214,8 +219,13 @@ display:flex;
 
 .lightbox img{
 
-max-width:90%;
-max-height:90%;
+max-width:92%;
+max-height:92%;
+
+box-shadow:
+0 0 40px rgba(0,0,0,.8);
+
+border-radius:4px;
 
 }
 
@@ -407,6 +417,15 @@ function filterSelection(category){
 
 const images =
 document.querySelectorAll('.gallery img');
+
+const buttons =
+document.querySelectorAll('.filter-btn');
+
+buttons.forEach(btn=>{
+btn.classList.remove('active');
+});
+
+event.target.classList.add('active');
 
 images.forEach(img=>{
 
