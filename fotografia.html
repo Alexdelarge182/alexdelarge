@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fotografía | Alex Delarge</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header{
+
+height:50vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.3),
+rgba(0,0,0,.7)
+),
+url("assets/photos/portada.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+header h1{
+
+font-size:3rem;
+font-weight:300;
+letter-spacing:8px;
+text-transform:uppercase;
+
+}
+
+/* MENU */
+
+.menu{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:25px;
+
+display:flex;
+justify-content:center;
+
+background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(12px);
+
+z-index:1000;
+
+}
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:3px;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+}
+
+/* GALERIA */
+
+.gallery{
+
+padding:80px 8%;
+
+column-count:3;
+column-gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+margin-bottom:20px;
+
+cursor:pointer;
+
+transition:.4s;
+
+break-inside:avoid;
+
+}
+
+.gallery img:hover{
+
+opacity:.85;
+
+transform:scale(1.01);
+
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.95);
+
+justify-content:center;
+align-items:center;
+
+z-index:9999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+
+}
+
+.lightbox.active{
+
+display:flex;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.gallery{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery{
+
+column-count:1;
+
+}
+
+header h1{
+
+font-size:2rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu">
+
+<a href="index.html">
+← Volver al inicio
+</a>
+
+</div>
+
+<header>
+
+<h1>Fotografía</h1>
+
+</header>
+
+<div class="gallery">
+
+<img src="assets/photos/r1.jpg">
+<img src="assets/photos/r2.jpg">
+<img src="assets/photos/r3.jpg">
+<img src="assets/photos/r4.jpg">
+<img src="assets/photos/r5.jpg">
+<img src="assets/photos/r6.jpg">
+<img src="assets/photos/r7.jpg">
+<img src="assets/photos/r8.jpg">
+<img src="assets/photos/r9.jpg">
+<img src="assets/photos/r10.jpg">
+<img src="assets/photos/r11.jpg">
+<img src="assets/photos/r12.jpg">
+<img src="assets/photos/r13.jpg">
+<img src="assets/photos/r14.jpg">
+<img src="assets/photos/r15.jpg">
+<img src="assets/photos/r16.jpg">
+<img src="assets/photos/r17.jpg">
+<img src="assets/photos/r18.jpg">
+<img src="assets/photos/r19.jpg">
+<img src="assets/photos/r20.jpg">
+<img src="assets/photos/r21.jpg">
+<img src="assets/photos/r22.jpg">
+<img src="assets/photos/r23.jpg">
+<img src="assets/photos/r24.jpg">
+<img src="assets/photos/r25.jpg">
+<img src="assets/photos/r26.jpg">
+<img src="assets/photos/r27.jpg">
+<img src="assets/photos/r28.jpg">
+<img src="assets/photos/r29.jpg">
+<img src="assets/photos/r30.jpg">
+<img src="assets/photos/r31.jpg">
+<img src="assets/photos/r32.jpg">
+<img src="assets/photos/r33.jpg">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+const images =
+document.querySelectorAll('.gallery img');
+
+const lightbox =
+document.getElementById('lightbox');
+
+const lightboxImg =
+document.getElementById('lightbox-img');
+
+images.forEach(img => {
+
+img.addEventListener('click', () => {
+
+lightbox.classList.add('active');
+
+lightboxImg.src = img.src;
+
+});
+
+});
+
+lightbox.addEventListener('click', () => {
+
+lightbox.classList.remove('active');
+
+});
+
+</script>
+
+</body>
+
+</html>
