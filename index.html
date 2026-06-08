@@ -76,7 +76,19 @@ align-items:center;
 gap:35px;
 
 }
+.hamburger{
 
+display:none;
+
+font-size:2rem;
+
+cursor:pointer;
+
+color:white;
+
+z-index:1001;
+
+}
 .menu a{
 
 color:white;
@@ -341,23 +353,62 @@ height:30px;
 
 }
 
+/* BOTÓN HAMBURGUESA */
+
+.hamburger{
+
+display:block;
+
+}
+
+/* MENÚ DESPLEGABLE */
+
 .menu{
 
-gap:15px;
-flex-wrap:wrap;
-justify-content:flex-end;
+display:none;
+
+position:absolute;
+
+top:70px;
+right:20px;
+
+background:rgba(0,0,0,.95);
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+border:1px solid rgba(255,255,255,.1);
+
+min-width:220px;
+
+}
+
+.menu.active{
+
+display:flex;
 
 }
 
 .menu a{
 
-font-size:.65rem;
+font-size:.75rem;
+
+}
+
+/* PORTADA */
+
+.hero{
+
+background-position:70% center;
 
 }
 
 .hero-logo{
 
-width:280px;
+width:180px;
 
 }
 
@@ -386,7 +437,9 @@ padding:80px 7%;
 <a href="index.html" class="nav-logo">
 <img src="assets/logo/logob.png" alt="Alex Delarge">
 </a>
-
+<div class="hamburger" onclick="toggleMenu()">
+☰
+</div>
 <div class="menu">
 
 <a href="#fotografia">Fotografía</a>
@@ -483,7 +536,17 @@ Quito · Ecuador
 </p>
 
 </footer>
+<script>
 
+function toggleMenu(){
+
+document
+.querySelector('.menu')
+.classList.toggle('active');
+
+}
+
+</script>
 </body>
 
 </html>
