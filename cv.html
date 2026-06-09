@@ -36,21 +36,52 @@ padding:80px 0;
 border-bottom:1px solid rgba(255,255,255,.1);
 
 }
-.hero-layout{
+.hero-top{
 
 display:flex;
 
+justify-content:center;
+
 align-items:center;
 
-justify-content:flex-start;
+gap:60px;
 
-gap:70px;
+margin-bottom:50px;
 
-max-width:1100px;
-
-margin:0 auto;
+flex-wrap:wrap;
 
 }
+
+.hero-photo img{
+
+width:280px;
+
+height:auto;
+
+display:block;
+
+}
+
+.cv-logo{
+
+width:280px;
+
+height:auto;
+
+display:block;
+
+}
+
+.hero-bottom{
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
 
 .hero-photo img{
 
@@ -62,13 +93,7 @@ display:block;
 
 }
 
-.hero-info{
 
-flex:1;
-
-text-align:left;
-
-}
 
 .cv-logo{
 
@@ -337,20 +362,22 @@ padding:40px 7%;
 
 <section class="hero">
 
-<div class="hero-layout">
+<div class="hero-top">
 
 <div class="hero-photo">
-
 <img src="assets/photos/yo.jpg" alt="Alexander Villacrés">
-
 </div>
 
-<div class="hero-info">
-
+<div class="hero-brand">
 <img
 src="assets/logo/logob.png"
 alt="Logo"
 class="cv-logo">
+</div>
+
+</div>
+
+<div class="hero-bottom">
 
 <h1>ALEXANDER VILLACRÉS</h1>
 
@@ -365,8 +392,6 @@ alex.slash182@gmail.com<br>
 Behance: www.behance.net/AlexDlarge<br>
 Instagram: @alex_delarge.ph
 </p>
-
-</div>
 
 </div>
 
