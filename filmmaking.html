@@ -104,37 +104,68 @@ color:white;
 
 .hero{
 
-padding:180px 10% 100px;
+height:75vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.75)
+),
+url("assets/photos/portadafilm.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 text-align:center;
+
+padding:0 10%;
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
+.hero-content{
+
+max-width:900px;
+
+}
+
 .hero h1{
 
-font-size:4rem;
+font-size:5rem;
 
 font-weight:200;
 
-letter-spacing:10px;
+letter-spacing:12px;
 
-margin-bottom:20px;
+margin-bottom:25px;
 
 }
 
 .hero p{
 
-max-width:800px;
+font-size:1.2rem;
+
+color:#d0d0d0;
+
+line-height:1.8;
+
+max-width:700px;
 
 margin:auto;
 
-color:#bdbdbd;
-
-font-size:1.1rem;
-
 }
+
+
 
 /* =========================
    CONTENIDO
@@ -328,7 +359,27 @@ color:black;
 ========================= */
 
 @media(max-width:768px){
+.hero{
 
+height:60vh;
+
+padding:0 8%;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+letter-spacing:6px;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
 nav{
 
 padding:15px 20px;
@@ -426,6 +477,8 @@ height:220px;
 
 <section class="hero">
 
+<div class="hero-content">
+
 <h1>FILMMAKING</h1>
 
 <p>
@@ -433,6 +486,8 @@ Producción audiovisual, coordinación de rodajes,
 videografía y postproducción para campañas publicitarias,
 contenido corporativo y comunicación digital.
 </p>
+
+</div>
 
 </section>
 
