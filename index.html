@@ -367,15 +367,36 @@ padding-top:140px;
 }
 
 
-/* BOTÓN HAMBURGUESA */
+@media(max-width:768px){
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.15),
+rgba(0,0,0,.65)
+),
+url("assets/photos/portadamovile.jpg");
+
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:flex-start;
+align-items:center;
+
+padding-top:140px;
+
+}
 
 .hamburger{
 
 display:block;
 
 }
-
-/* MENÚ DESPLEGABLE */
 
 .menu{
 
@@ -409,14 +430,6 @@ display:flex;
 .menu a{
 
 font-size:.75rem;
-
-}
-
-/* PORTADA */
-
-.hero{
-
-background-position:70% center;
 
 }
 
