@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alex Delarge | Filmmaking</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+overflow-x:hidden;
+line-height:1.8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:18px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+.nav-logo img{
+
+height:42px;
+width:auto;
+
+}
+
+.menu{
+
+display:flex;
+gap:35px;
+
+}
+
+.menu a{
+
+color:white;
+text-decoration:none;
+
+font-size:.75rem;
+letter-spacing:3px;
+text-transform:uppercase;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+opacity:.5;
+
+}
+
+.hamburger{
+
+display:none;
+
+font-size:2rem;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+padding:180px 10% 100px;
+
+text-align:center;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+font-weight:200;
+
+letter-spacing:10px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:800px;
+
+margin:auto;
+
+color:#bdbdbd;
+
+font-size:1.1rem;
+
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:100px 10%;
+
+}
+
+.section{
+
+margin-bottom:120px;
+
+}
+
+.section h2{
+
+font-size:2rem;
+
+font-weight:300;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+margin-bottom:40px;
+
+}
+
+.section ul{
+
+padding-left:20px;
+
+}
+
+.section li{
+
+margin-bottom:10px;
+
+color:#d0d0d0;
+
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.project{
+
+margin-bottom:120px;
+
+}
+
+.project h3{
+
+font-size:2rem;
+
+font-weight:300;
+
+letter-spacing:4px;
+
+margin-bottom:10px;
+
+}
+
+.project h4{
+
+font-size:1rem;
+
+font-weight:300;
+
+color:#bdbdbd;
+
+margin-bottom:25px;
+
+}
+
+.project-role{
+
+margin-top:25px;
+
+font-size:.8rem;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#8f8f8f;
+
+}
+
+.video-placeholder{
+
+width:100%;
+
+height:500px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+border:1px solid rgba(255,255,255,.1);
+
+background:#0a0a0a;
+
+letter-spacing:4px;
+
+color:#666;
+
+margin:30px 0;
+
+}
+
+.video-container{
+
+position:relative;
+
+padding-bottom:56.25%;
+
+height:0;
+
+overflow:hidden;
+
+margin:30px 0;
+
+}
+
+.video-container iframe{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+border:none;
+
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.back{
+
+text-align:center;
+
+padding:80px 0;
+
+}
+
+.back a{
+
+color:white;
+
+text-decoration:none;
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:18px 28px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+transition:.3s;
+
+}
+
+.back a:hover{
+
+background:white;
+
+color:black;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 20px;
+
+}
+
+.nav-logo img{
+
+height:32px;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.menu{
+
+display:none;
+
+position:absolute;
+
+top:70px;
+right:20px;
+
+background:rgba(0,0,0,.95);
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+border:1px solid rgba(255,255,255,.1);
+
+min-width:220px;
+
+}
+
+.menu.active{
+
+display:flex;
+
+}
+
+.hero{
+
+padding:140px 8% 80px;
+
+}
+
+.hero h1{
+
+font-size:2.5rem;
+
+letter-spacing:6px;
+
+}
+
+.video-placeholder{
+
+height:220px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html" class="nav-logo">
+<img src="assets/logo/logob.png" alt="Alex Delarge">
+</a>
+
+<div class="hamburger" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="menu">
+
+<a href="index.html">Inicio</a>
+<a href="fotografia.html">Fotografía</a>
+<a href="cv.html">CV</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>FILMMAKING</h1>
+
+<p>
+Producción audiovisual, coordinación de rodajes,
+videografía y postproducción para campañas publicitarias,
+contenido corporativo y comunicación digital.
+</p>
+
+</section>
+
+<div class="container">
+
+<section class="section">
+
+<h2>Coordinador de Producción Audiovisual</h2>
+
+<ul>
+<li>Coordinación logística de rodajes.</li>
+<li>Supervisión de equipos técnicos y operativos.</li>
+<li>Gestión de catering y proveedores.</li>
+<li>Scouting y coordinación de locaciones.</li>
+<li>Seguimiento del cronograma de producción.</li>
+<li>Apoyo operativo durante grabaciones y eventos.</li>
+</ul>
+
+</section>
+
+<div class="project">
+
+<h3>BANCO PICHINCHA</h3>
+<h4>Nómina Confianza</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>KFC</h3>
+<h4>Autorapi</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>NISSAN</h3>
+<h4>Esto es Emocionante</h4>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/YR5ED3-1cwg"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>NISSAN</h3>
+<h4>Esto es Nissan</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>CHEVROLET</h3>
+<h4>Trailblazer</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>BYD</h3>
+<h4>Eléctricos</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>PRODUBANCO</h3>
+<h4>Transferencias App</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>RM</h3>
+<h4>Urban</h4>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Coordinador de Producción Audiovisual
+</div>
+
+</div>
+
+<section class="section">
+
+<h2>Videógrafo y Editor de Video</h2>
+
+<ul>
+<li>Producción, grabación y edición de contenido audiovisual.</li>
+<li>Operación de cámaras, iluminación y audio.</li>
+<li>Edición y postproducción en Adobe Premiere Pro.</li>
+<li>Creación de contenido para Instagram, TikTok, Facebook y YouTube.</li>
+</ul>
+
+</section>
+
+<div class="project">
+
+<h3>DISEÑART ARQUITECTOS</h3>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/1usFocCVbRU"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="project-role">
+Videógrafo y Editor de Video
+</div>
+
+</div>
+
+<div class="project">
+
+<h3>SORELLE ART</h3>
+
+<div class="video-placeholder">
+VIDEO PRÓXIMAMENTE
+</div>
+
+<div class="project-role">
+Videógrafo y Editor de Video
+</div>
+
+</div>
+
+<div class="back">
+
+<a href="index.html">
+← Volver al Portafolio
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+document
+.querySelector('.menu')
+.classList.toggle('active');
+
+}
+
+</script>
+
+</body>
+</html>
