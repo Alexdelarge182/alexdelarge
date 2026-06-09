@@ -79,7 +79,80 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
 }
+.specialties{
 
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+.clients{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+}
+.software-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+}
+
+.software-grid div{
+
+padding:25px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+.clients div{
+
+text-align:center;
+
+padding:25px;
+
+border:1px solid rgba(255,255,255,.08);
+
+font-size:1rem;
+
+letter-spacing:2px;
+
+}
+.specialties div{
+
+border:1px solid rgba(255,255,255,.1);
+
+padding:30px;
+
+text-align:center;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+.specialties div:hover{
+
+background:white;
+
+color:black;
+
+}
 ul{
 padding-left:20px;
 }
@@ -145,7 +218,7 @@ margin-bottom:15px;
 padding:40px 7%;
 }
 
-}
+
 
 </style>
 
@@ -191,7 +264,51 @@ Combino estrategia visual, narrativa cinematográfica y diseño para desarrollar
 </p>
 
 </section>
+<section class="section">
 
+<h2>Especialidades</h2>
+
+<div class="specialties">
+
+<div>Fotografía Comercial</div>
+
+<div>Fotografía Arquitectónica</div>
+
+<div>Fotografía Inmobiliaria</div>
+
+<div>Producción Audiovisual</div>
+
+<div>Dirección Creativa</div>
+
+<div>Contenido para Redes Sociales</div>
+
+<div>Branding y Comunicación Visual</div>
+
+<div>Producción Publicitaria</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2>Clientes Destacados</h2>
+
+<div class="clients">
+
+<div>Chevrolet</div>
+<div>Banco Pichincha</div>
+<div>Renault</div>
+<div>Nissan</div>
+<div>Smart Fit</div>
+<div>KFC</div>
+<div>Banco Internacional</div>
+<div>Policía Nacional</div>
+<div>Ministerio de Salud</div>
+<div>Menestras del Negro</div>
+
+</div>
+
+</section>
 <section class="section">
 
 <h2>Experiencia Profesional</h2>
@@ -399,17 +516,27 @@ Desarrollo de proyectos independientes para empresas, emprendimientos y marcas p
 
 <h2>Software</h2>
 
-<ul>
-<li>Adobe Photoshop</li>
-<li>Adobe Illustrator</li>
-<li>Adobe InDesign</li>
-<li>Adobe Lightroom</li>
-<li>Adobe Premiere Pro</li>
-<li>Adobe After Effects</li>
-<li>Adobe Audition</li>
-<li>Final Cut Pro</li>
-<li>CapCut</li>
-</ul>
+<div class="software-grid">
+
+<div>Photoshop</div>
+
+<div>Illustrator</div>
+
+<div>InDesign</div>
+
+<div>Lightroom</div>
+
+<div>Premiere Pro</div>
+
+<div>After Effects</div>
+
+<div>Audition</div>
+
+<div>Final Cut Pro</div>
+
+<div>CapCut</div>
+
+</div>
 
 </section>
 
@@ -430,15 +557,53 @@ Desarrollo de proyectos independientes para empresas, emprendimientos y marcas p
 
 <h2>Equipo Profesional</h2>
 
-<ul>
-<li>Sony A7 IV</li>
-<li>Sony FE 28-70mm</li>
-<li>Viltrox 14mm</li>
-<li>DJI RS3 Mini</li>
-<li>DJI Mic</li>
-<li>Sistema de iluminación Godox SK400</li>
-<li>Sistema de iluminación continua Neewer</li>
-</ul>
+<div class="grid">
+
+<div>
+
+<h3>Cámara</h3>
+
+<p>Sony A7 IV</p>
+
+</div>
+
+<div>
+
+<h3>Lentes</h3>
+
+<p>Sony FE 28-70mm</p>
+
+<p>Viltrox 14mm</p>
+
+</div>
+
+<div>
+
+<h3>Audio</h3>
+
+<p>DJI Mic</p>
+
+</div>
+
+<div>
+
+<h3>Estabilización</h3>
+
+<p>DJI RS3 Mini</p>
+
+</div>
+
+<div>
+
+<h3>Iluminación</h3>
+
+<p>Godox SK400</p>
+
+<p>Neewer</p>
+
+</div>
+
+</div>
 
 </section>
 
