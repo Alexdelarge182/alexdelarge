@@ -22,11 +22,46 @@ color:white;
 font-family:Arial, Helvetica, sans-serif;
 line-height:1.8;
 }
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+}
 
+.nav-logo img{
+height:40px;
+}
+
+.menu{
+display:flex;
+gap:35px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+}
+
+.hamburger{
+display:none;
+font-size:1.8rem;
+cursor:pointer;
+}
 .container{
-max-width:1200px;
-margin:auto;
-padding:60px 10%;
+width:100%;
+max-width:none;
+padding:120px 5% 60px;
 }
 
 .hero{
@@ -301,7 +336,26 @@ margin-bottom:15px;
 .container{
 padding:40px 7%;
 }
+.hamburger{
+display:block;
+}
 
+.menu{
+display:none;
+position:absolute;
+top:80px;
+right:20px;
+background:rgba(0,0,0,.95);
+padding:20px;
+flex-direction:column;
+gap:20px;
+border:1px solid rgba(255,255,255,.1);
+min-width:220px;
+}
+
+.menu.active{
+display:flex;
+}
 
 
 </style>
@@ -309,7 +363,26 @@ padding:40px 7%;
 </head>
 
 <body>
+<nav>
 
+<a href="index.html" class="nav-logo">
+<img src="assets/logo/logob.png" alt="Alex Delarge">
+</a>
+
+<div class="hamburger" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="menu">
+
+<a href="index.html">Inicio</a>
+<a href="fotografia.html">Fotografía</a>
+<a href="filmmaking.html">Filmmaking</a>
+<a href="cv.html">CV</a>
+
+</div>
+
+</nav>
 <div class="container">
 
 <section class="hero">
@@ -730,6 +803,16 @@ Desarrollo de proyectos independientes para empresas, emprendimientos y marcas p
 </div>
 
 </div>
+<script>
 
+function toggleMenu(){
+
+document
+.querySelector('.menu')
+.classList.toggle('active');
+
+}
+
+</script>
 </body>
 </html>
