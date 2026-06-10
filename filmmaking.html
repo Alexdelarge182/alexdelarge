@@ -223,10 +223,31 @@ color:#d0d0d0;
 
 display:grid;
 
-grid-template-columns:
-repeat(3,1fr);
+grid-template-columns:repeat(3,1fr);
 
 gap:30px;
+
+align-items:start;
+
+}
+
+.project{
+
+background:#0b0b0b;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:25px;
+
+transition:.35s;
+
+overflow:hidden;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
 
 }
 
@@ -240,11 +261,11 @@ transform:translateY(-4px);
 
 .project h3{
 
-font-size:2.5rem;
+font-size:1.4rem;
 
-font-weight:200;
+font-weight:300;
 
-letter-spacing:6px;
+letter-spacing:3px;
 
 margin-bottom:8px;
 
@@ -252,72 +273,71 @@ text-transform:uppercase;
 
 }
 
-
-
 .project h4{
 
-font-size:.9rem;
+font-size:.75rem;
 
-letter-spacing:3px;
+letter-spacing:2px;
 
 text-transform:uppercase;
 
 color:#8d8d8d;
 
-margin-bottom:30px;
+margin-bottom:20px;
 
 }
+
 .project-description{
 
-font-size:1rem;
+font-size:.9rem;
 
-line-height:1.8;
+line-height:1.7;
 
 color:#c8c8c8;
 
-margin-bottom:25px;
-
-max-width:900px;
+margin-bottom:20px;
 
 }
 
 .project-role{
 
-margin-top:25px;
+margin-top:20px;
 
-padding-top:20px;
+padding-top:15px;
 
 border-top:1px solid rgba(255,255,255,.08);
 
-font-size:.75rem;
+font-size:.7rem;
 
-letter-spacing:3px;
+letter-spacing:2px;
 
 text-transform:uppercase;
 
 color:#8f8f8f;
 
 }
+
 .video-placeholder{
 
 width:100%;
 
-height:500px;
+height:220px;
 
 display:flex;
 
 justify-content:center;
+
 align-items:center;
 
 border:1px solid rgba(255,255,255,.1);
 
 background:#0a0a0a;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 color:#666;
 
-margin:30px 0;
+margin:20px 0;
 
 }
 
@@ -331,7 +351,7 @@ height:0;
 
 overflow:hidden;
 
-margin:30px 0;
+margin:20px 0;
 
 }
 
@@ -340,12 +360,28 @@ margin:30px 0;
 position:absolute;
 
 top:0;
+
 left:0;
 
 width:100%;
+
 height:100%;
 
 border:none;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
@@ -541,12 +577,11 @@ contenido corporativo y comunicación digital.
 <li>Apoyo operativo durante grabaciones y eventos.</li>
 </ul>
 
-</section>
+<div class="projects-grid">
 
 <div class="project">
 
 <h3>BANCO PICHINCHA</h3>
-
 <h4>Nómina Confianza</h4>
 
 <p class="project-description">
@@ -554,46 +589,33 @@ Campaña audiovisual desarrollada para promover el servicio Nómina Confianza de
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/ufke7jJqY9A"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/ufke7jJqY9A" allowfullscreen></iframe>
 </div>
 
-<p class="project-role">
-Coordinador de Producción Audiovisual
-</p>
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
 
 <div class="project">
 
 <h3>KFC</h3>
-
 <h4>Autorapi</h4>
 
 <p class="project-description">
-Campaña audiovisual desarrollada para la promoción del servicio Autorapi de KFC, enfocada en experiencia de usuario, rapidez y comunicación comercial para medios digitales.
+Campaña audiovisual desarrollada para la promoción del servicio Autorapi de KFC.
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/DFT_8XA3vSk"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/DFT_8XA3vSk" allowfullscreen></iframe>
 </div>
 
-<p class="project-role">
-Coordinador de Producción Audiovisual
-</p>
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
-
 
 <div class="project">
 
 <h3>NISSAN</h3>
-
 <h4>Esto es Emocionante</h4>
 
 <p class="project-description">
@@ -601,17 +623,16 @@ Campaña publicitaria enfocada en posicionamiento de marca y experiencia de cond
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/YR5ED3-1cwg"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/YR5ED3-1cwg" allowfullscreen></iframe>
 </div>
 
+<p class="project-role">Coordinador de Producción Audiovisual</p>
+
+</div>
 
 <div class="project">
 
 <h3>NISSAN</h3>
-
 <h4>Esto es Nissan</h4>
 
 <p class="project-description">
@@ -619,45 +640,33 @@ Campaña audiovisual enfocada en la identidad de marca, innovación y experienci
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/XGhOp5j_J2Y"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/XGhOp5j_J2Y" allowfullscreen></iframe>
 </div>
 
-
-<div class="project-role">
-Coordinador de Producción Audiovisual
-</div>
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
 
 <div class="project">
 
 <h3>CHEVROLET</h3>
-
-<h4>Bolt</h4>
+<h4>Trailblazer</h4>
 
 <p class="project-description">
 Producción audiovisual orientada al posicionamiento y promoción de Chevrolet Trailblazer.
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/2-0Aj4o_5Xk"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/2-0Aj4o_5Xk" allowfullscreen></iframe>
 </div>
 
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
-<div class="project-role">
-Coordinador de Producción Audiovisual
 </div>
 
 <div class="project">
 
 <h3>BYD</h3>
-
 <h4>Eléctricos</h4>
 
 <p class="project-description">
@@ -665,49 +674,33 @@ Campaña audiovisual enfocada en movilidad eléctrica, innovación y sostenibili
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/isrogvxlL18"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/isrogvxlL18" allowfullscreen></iframe>
 </div>
 
-
-<div class="project-role">
-Coordinador de Producción Audiovisual
-</div>
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
 
 <div class="project">
 
 <h3>PRODUBANCO</h3>
-
 <h4>Transferencias App</h4>
 
 <p class="project-description">
-Campaña audiovisual para la promoción de funcionalidades digitales y experiencia de usuario en la aplicación móvil de Produbanco.
+Campaña audiovisual para la promoción de funcionalidades digitales y experiencia de usuario.
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/I03FfGGxZPo"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/I03FfGGxZPo" allowfullscreen></iframe>
 </div>
 
-<p class="project-role">
-Coordinador de Producción Audiovisual
-</p>
-
-</div>
-
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
 
 <div class="project">
 
 <h3>RM</h3>
-
 <h4>Urban</h4>
 
 <p class="project-description">
@@ -715,19 +708,16 @@ Producción audiovisual para comunicación de marca y posicionamiento comercial.
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/eFxeTjTi1cM"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/eFxeTjTi1cM" allowfullscreen></iframe>
 </div>
 
-<p class="project-role">
-Coordinador de Producción Audiovisual
-</p>
+<p class="project-role">Coordinador de Producción Audiovisual</p>
 
 </div>
 
+</div>
 
+</section>
 
 <section class="section">
 
@@ -740,12 +730,11 @@ Coordinador de Producción Audiovisual
 <li>Creación de contenido para Instagram, TikTok, Facebook y YouTube.</li>
 </ul>
 
-</section>
+<div class="projects-grid">
 
 <div class="project">
 
 <h3>DISEÑART ARQUITECTOS</h3>
-
 <h4>Contenido Arquitectónico e Inmobiliario</h4>
 
 <p class="project-description">
@@ -753,10 +742,7 @@ Producción, grabación y edición de contenido audiovisual para proyectos arqui
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/1usFocCVbRU"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/1usFocCVbRU" allowfullscreen></iframe>
 </div>
 
 <p class="project-role">
@@ -765,12 +751,9 @@ Videógrafo y Editor de Video
 
 </div>
 
-
-
 <div class="project">
 
 <h3>SORELLE ART</h3>
-
 <h4>Contenido para Redes Sociales</h4>
 
 <p class="project-description">
@@ -778,18 +761,18 @@ Producción audiovisual, grabación y edición de contenido para redes sociales 
 </p>
 
 <div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/WNIFyQtgZAw"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/WNIFyQtgZAw" allowfullscreen></iframe>
 </div>
 
 <p class="project-role">
 Videógrafo y Editor de Video
 </p>
 
+</div>
 
 </div>
+
+</section>
 
 <div class="back">
 
