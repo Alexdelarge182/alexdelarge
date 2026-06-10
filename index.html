@@ -133,11 +133,33 @@ align-items:flex-start;
 padding-top:10vh;
 
 position:relative;
+overflow:hidden;
 
 text-align:center;
 
 }
+.hero::before{
 
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+background:
+radial-gradient(
+circle 250px at var(--x,50%) var(--y,50%),
+rgba(255,255,255,.12),
+transparent 70%
+);
+
+}
 .hero-logo{
 
 width:200px;
@@ -586,6 +608,23 @@ document
 .classList.toggle('active');
 
 }
+
+</script>
+<script>
+
+const hero = document.querySelector('.hero');
+
+hero.addEventListener('mousemove', (e) => {
+
+const rect = hero.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+hero.style.setProperty('--x', x + 'px');
+hero.style.setProperty('--y', y + 'px');
+
+});
 
 </script>
 </body>
