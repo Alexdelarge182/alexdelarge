@@ -172,13 +172,9 @@ margin:auto;
 ========================= */
 
 .container{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:100px 10%;
-
+width:100%;
+max-width:none;
+padding:60px 5%;
 }
 
 .section{
@@ -220,15 +216,9 @@ color:#d0d0d0;
 ========================= */
 
 .projects-grid{
-
 display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
+grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
 gap:30px;
-
-align-items:start;
-
 }
 
 .project{
