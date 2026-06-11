@@ -3,7 +3,7 @@
 
 <head>
 <link
-href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap"
 rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,6 +80,9 @@ gap:35px;
 .hamburger{
 
 display:none;
+
+background:none;
+border:0;
 
 font-size:2rem;
 
@@ -270,72 +273,6 @@ font-size:1.1rem;
 color:#d0d0d0;
 
 }
-.about-section{
-
-padding:140px 0;
-
-display:flex;
-
-align-items:center;
-
-gap:60px;
-
-}
-
-.about-title{
-
-writing-mode:vertical-rl;
-
-transform:rotate(180deg);
-
-font-family:'Bebas Neue', sans-serif;
-
-font-size:12rem;
-
-letter-spacing:6px;
-
-color:rgba(255,255,255,.08);
-
-transition:.4s ease;
-
-}
-
-.about-title:hover{
-
-color:rgba(255,255,255,.25);
-
-}
-.about-content{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-width:100%;
-
-gap:80px;
-
-}
-
-.about-text{
-
-max-width:650px;
-
-}
-
-.about-text p{
-
-font-size:1.1rem;
-
-line-height:2;
-
-color:#cfcfcf;
-
-margin-bottom:25px;
-
-}
 /* =========================
    GALERÍA
 ========================= */
@@ -470,7 +407,7 @@ opacity:.6;
 }
 .about-section{
 
-padding:140px 0;
+padding:140px 10%;
 
 display:flex;
 
@@ -719,9 +656,9 @@ width:220px;
 <a href="index.html" class="nav-logo">
 <img src="assets/logo/logob.png" alt="Alex Delarge">
 </a>
-<div class="hamburger" onclick="toggleMenu()">
+<button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
 ☰
-</div>
+</button>
 <div class="menu">
     <a href="#about">Sobre mí</a>
     <a href="fotografia.html">Fotografía</a>
@@ -745,7 +682,7 @@ class="hero-logo">
 
 </section>
 
-<section class="about-section">
+<section class="about-section" id="about">
 
 <div class="about-title">
 ABOUT
@@ -781,9 +718,6 @@ alt="Alexander Villacrés">
 
 </section>
 
-
-</section>
-
 <section
 class="section"
 id="fotografia">
@@ -792,16 +726,16 @@ id="fotografia">
 
 <div class="gallery">
 
-<img src="assets/photos/r9.jpg">
-<img src="assets/photos/r28.jpg">
-<img src="assets/photos/r4.jpg">
-<img src="assets/photos/r10.jpg">
-<img src="assets/photos/r14.jpg">
-<img src="assets/photos/r21.jpg">
-<img src="assets/photos/r32.jpg">
-<img src="assets/photos/r33.jpg">
-<img src="assets/photos/r11.jpg">
-<img src="assets/photos/r18.jpg">
+<img src="assets/photos/r9.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r28.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r4.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r10.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r14.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r21.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r32.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r33.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r11.jpg" alt="Fotografía de portafolio de Alex Delarge">
+<img src="assets/photos/r18.jpg" alt="Fotografía de portafolio de Alex Delarge">
 
 </div>
 
@@ -819,7 +753,7 @@ EXPLORAR GALERÍA →
 
 <p>
 Instagram:
-<a href="https://instagram.com/alex_delarge.ph" target="_blank">
+<a href="https://instagram.com/alex_delarge.ph" target="_blank" rel="noopener noreferrer">
 @alex_delarge.ph
 </a>
 </p>
@@ -837,9 +771,11 @@ Quito · Ecuador
 
 function toggleMenu(){
 
-document
-.querySelector('.menu')
-.classList.toggle('active');
+const menu = document.querySelector('.menu');
+const button = document.querySelector('.hamburger');
+const isOpen = menu.classList.toggle('active');
+
+button.setAttribute('aria-expanded', isOpen);
 
 }
 
