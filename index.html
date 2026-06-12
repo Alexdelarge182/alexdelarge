@@ -407,7 +407,7 @@ opacity:.6;
 }
 .about-section{
 
-padding:140px 10%;
+padding:140px 5%;
 
 display:flex;
 
@@ -429,7 +429,7 @@ font-size:15rem;
 
 letter-spacing:4px;
 
-color:rgba(255,255,255,.06);
+color:rgba(255,255,255,.10);
 
 transition:.4s ease;
 
@@ -439,73 +439,66 @@ user-select:none;
 
 .about-title:hover{
 
-color:rgba(255,255,255,.20);
+color:rgba(255,255,255,.28);
 
 }
 
 .about-content{
 
-display:flex;
+display:grid;
 
-justify-content:space-between;
+grid-template-columns:
+140px
+1fr
+500px;
 
 align-items:center;
 
 width:100%;
 
-gap:80px;
+max-width:1700px;
+
+margin:auto;
+
+gap:40px;
 
 }
 
 .about-text{
 
-max-width:650px;
+max-width:750px;
 
 }
 
 .about-text p{
 
-font-size:1.1rem;
+font-size:1.45rem;
 
-line-height:2;
-
-color:#cfcfcf;
-
-margin-bottom:25px;
+line-height:1.4;
 
 }
 
 .about-photo img{
 
-width:500px;
+width:100%;
+
+max-width:520px;
 
 height:auto;
 
 display:block;
 
-border-radius:8px;
+border-radius:0;
 
 }
 
 .about-btn{
 
-display:inline-block;
+margin-top:50px;
 
-margin-top:20px;
+width:220px;
 
-padding:18px 35px;
-
-border:1px solid rgba(255,255,255,.15);
-
-text-decoration:none;
-
-color:white;
-
-letter-spacing:3px;
-
-font-size:.8rem;
-
-transition:.3s;
+text-align:center;
 
 }
 
