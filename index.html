@@ -2,8 +2,10 @@
 <html lang="es">
 
 <head>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Alex Delarge | Fotografía • Filmmaking • Diseño</title>
@@ -118,7 +120,12 @@ opacity:.5;
 
 height:100vh;
 
-background:linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.75)),url("assets/photos/portada.jpg");
+background:
+linear-gradient(
+rgba(0,0,0,.20),
+rgba(0,0,0,.75)
+),
+url("assets/photos/portada.jpg");
 
 background-size:cover;
 background-position:center;
@@ -150,7 +157,12 @@ height:100%;
 
 pointer-events:none;
 
-background:radial-gradient(circle 450px at var(--x,50%) var(--y,50%),rgba(255,255,255,.04),transparent 75%);
+background:
+radial-gradient(
+circle 450px at var(--x,50%) var(--y,50%),
+rgba(255,255,255,.04),
+transparent 75%
+);
 
 }
 .hero-logo{
@@ -158,7 +170,9 @@ background:radial-gradient(circle 450px at var(--x,50%) var(--y,50%),rgba(255,25
 width:200px;
 max-width:80%;
 
-filter:drop-shadow(0 15px 35px rgba(0,0,0,.6));
+filter:drop-shadow(
+0 15px 35px rgba(0,0,0,.6)
+);
 
 transition:
 transform .6s ease,
@@ -169,7 +183,13 @@ filter .6s ease;
 
 transform:scale(1.04);
 
-filter:drop-shadow(0 20px 45px rgba(0,0,0,.7)) drop-shadow(0 0 25px rgba(255,255,255,.12));
+filter:
+drop-shadow(
+0 20px 45px rgba(0,0,0,.7)
+)
+drop-shadow(
+0 0 25px rgba(255,255,255,.12)
+);
 
 }
 /* =========================
@@ -234,6 +254,25 @@ margin-bottom:60px;
 
 }
 
+/* =========================
+   SOBRE MI
+========================= */
+
+.about{
+
+max-width:850px;
+
+margin:auto;
+
+text-align:center;
+
+line-height:2;
+
+font-size:1.1rem;
+
+color:#d0d0d0;
+
+}
 /* =========================
    GALERÍA
 ========================= */
@@ -302,6 +341,72 @@ transform:scale(1.03);
 }
 
 /* =========================
+   BOTÓN PORTAFOLIO
+========================= */
+
+.portfolio-link{
+
+margin-top:60px;
+text-align:center;
+
+}
+
+.portfolio-link a{
+
+color:white;
+text-decoration:none;
+
+letter-spacing:3px;
+font-size:.8rem;
+
+text-transform:uppercase;
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:18px 28px;
+
+transition:.3s;
+
+}
+
+.portfolio-link a:hover{
+
+background:white;
+color:black;
+
+}
+.cv-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:3px;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:18px 28px;
+
+transition:.3s;
+
+}
+
+.cv-btn:hover{
+
+background:white;
+
+color:black;
+
+}
+/* =========================
    FOOTER
 ========================= */
 
@@ -339,7 +444,10 @@ padding:10px 5%;
 
 display:grid;
 
-grid-template-columns:180px minmax(0,1fr) minmax(320px,600px);
+grid-template-columns:
+180px
+1fr
+600px;
 
 align-items:center;
 
@@ -439,38 +547,11 @@ transition:.3s;
 
 }
 
-.about-btn:hover{
-
-background:white;
-
-color:black;
-
-}
 @media(max-width:1200px){
 
 .gallery{
 
 grid-template-columns:repeat(2,1fr);
-
-}
-
-.about-section{
-
-grid-template-columns:120px minmax(0,1fr) minmax(260px,360px);
-
-gap:40px;
-
-}
-
-.about-title{
-
-font-size:10rem;
-
-}
-
-.about-text p{
-
-font-size:1.5rem;
 
 }
 
@@ -485,7 +566,12 @@ font-size:1.5rem;
 
 height:100vh;
 
-background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.65)),url("assets/photos/portadamovile.jpg");
+background:
+linear-gradient(
+rgba(0,0,0,.15),
+rgba(0,0,0,.65)
+),
+url("assets/photos/portadamovile.jpg");
 
 background-size:cover;
 background-position:center center;
@@ -665,7 +751,10 @@ object-fit:cover;
 
 <section class="hero">
 
-<img src="assets/logo/logob.png" alt="Alex Delarge" class="hero-logo">
+<img
+src="assets/logo/logob.png"
+alt="Alex Delarge"
+class="hero-logo">
 
 
 <div class="scroll-indicator">
@@ -700,7 +789,9 @@ EXPLORAR CV
 
 <div class="about-photo">
 
-<img src="assets/photos/yo.jpg" alt="Alexander Villacrés">
+<img
+src="assets/photos/yo.jpg"
+alt="Alexander Villacrés">
 
 </div>
 
@@ -708,7 +799,9 @@ EXPLORAR CV
 
 </section>
 
-<section class="section" id="fotografia">
+<section
+class="section"
+id="fotografia">
 
 <h2>Fotografía</h2>
 
@@ -769,8 +862,6 @@ button.setAttribute('aria-expanded', isOpen);
 
 const hero = document.querySelector('.hero');
 
-if(hero){
-
 hero.addEventListener('mousemove', (e) => {
 
 const rect = hero.getBoundingClientRect();
@@ -782,8 +873,6 @@ hero.style.setProperty('--x', x + 'px');
 hero.style.setProperty('--y', y + 'px');
 
 });
-
-}
 
 </script>
 </body>
