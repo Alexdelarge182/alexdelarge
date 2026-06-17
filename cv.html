@@ -350,6 +350,49 @@ transition:.3s;
 background:white;
 color:black;
 }
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+
+.whatsapp-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    z-index:999;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.whatsapp-btn img{
+    width:36px;
+    height:36px;
+}
+
+.whatsapp-btn:hover{
+    transform:
+        translateY(-5px)
+        scale(1.08);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+}
 
 @media (max-width:768px){
 
@@ -466,8 +509,41 @@ color:black;
     .menu.active{
         display:flex;
     }
+    /* WHATSAPP MÓVIL */
+
+.whatsapp-btn{
+    width:60px;
+    height:60px;
+
+    right:20px;
+    bottom:20px;
+
+    animation:whatsappPulse 2.5s infinite;
 }
 
+.whatsapp-btn img{
+    width:30px;
+    height:30px;
+}
+}
+@keyframes whatsappPulse{
+
+    0%{
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,.45);
+    }
+
+    70%{
+        box-shadow:
+            0 0 0 18px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
 
 </style>
 
@@ -928,5 +1004,17 @@ document
 }
 
 </script>
+<a
+href="https://wa.me/593999245817"
+class="whatsapp-btn"
+target="_blank"
+aria-label="Contactar por WhatsApp">
+
+<img
+src="assets/icons/whatsapp.png"
+alt="WhatsApp">
+
+</a>
+
 </body>
 </html>
