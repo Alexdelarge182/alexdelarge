@@ -393,6 +393,143 @@ color:black;
     box-shadow:
         0 18px 45px rgba(0,0,0,.45);
 }
+/* =========================
+   CLIENTES
+========================= */
+
+.clients-section{
+    padding:140px 5%;
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:80px;
+    align-items:center;
+    overflow:hidden;
+}
+
+.clients-title{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+
+    font-family:'Bebas Neue', sans-serif;
+    font-size:10rem;
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.10);
+
+    transition:.4s ease;
+    user-select:none;
+}
+
+.clients-title:hover{
+    color:rgba(255,255,255,.28);
+}
+
+.clients-content{
+    width:100%;
+}
+
+.clients-subtitle{
+    font-size:.75rem;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.45);
+    text-transform:uppercase;
+    margin-bottom:60px;
+}
+
+.clients-slider{
+    position:relative;
+    overflow:hidden;
+}
+
+.clients-slider::before,
+.clients-slider::after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:180px;
+    height:100%;
+    z-index:2;
+    pointer-events:none;
+}
+
+.clients-slider::before{
+    left:0;
+    background:
+    linear-gradient(
+        to right,
+        #050505,
+        transparent
+    );
+}
+
+.clients-slider::after{
+    right:0;
+    background:
+    linear-gradient(
+        to left,
+        #050505,
+        transparent
+    );
+}
+
+.clients-track{
+    display:flex;
+    align-items:center;
+    gap:120px;
+    width:max-content;
+}
+
+.track-one{
+    margin-bottom:80px;
+    animation:slideRight 32s linear infinite;
+}
+
+.track-two{
+    animation:slideLeft 36s linear infinite;
+}
+
+.clients-slider:hover .clients-track{
+    animation-play-state:paused;
+}
+
+.clients-track img{
+    height:45px;
+    width:auto;
+
+    opacity:.35;
+    filter:grayscale(100%);
+
+    transition:
+    opacity .35s ease,
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.clients-track img:hover{
+    opacity:1;
+    filter:grayscale(0%);
+    transform:
+    translateY(-4px)
+    scale(1.05);
+}
+
+@keyframes slideRight{
+    from{
+        transform:translateX(-50%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        transform:translateX(0%);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
 
 @media (max-width:768px){
 
@@ -525,6 +662,44 @@ color:black;
     width:30px;
     height:30px;
 }
+/* CLIENTES */
+
+.clients-section{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    text-align:center;
+    padding:90px 7%;
+}
+
+.clients-title{
+    writing-mode:horizontal-tb;
+    transform:none;
+    font-size:4rem;
+}
+
+.clients-subtitle{
+    font-size:.7rem;
+    letter-spacing:3px;
+    margin-bottom:45px;
+}
+
+.clients-track{
+    gap:60px;
+}
+
+.track-one{
+    margin-bottom:45px;
+}
+
+.clients-track img{
+    height:32px;
+}
+
+.clients-slider::before,
+.clients-slider::after{
+    width:70px;
+}
 }
 @keyframes whatsappPulse{
 
@@ -653,22 +828,49 @@ Combino estrategia visual, narrativa cinematográfica y diseño para desarrollar
 </div>
 
 </section>
-<section class="section">
+<section class="clients-section">
 
-<h2>Clientes Destacados</h2>
+<div class="clients-title">
+CLIENTES
+</div>
 
-<div class="clients">
+<div class="clients-content">
 
-<div>Chevrolet</div>
-<div>Banco Pichincha</div>
-<div>Renault</div>
-<div>Nissan</div>
-<div>Smart Fit</div>
-<div>KFC</div>
-<div>Banco Internacional</div>
-<div>Policía Nacional</div>
-<div>Ministerio de Salud</div>
-<div>Menestras del Negro</div>
+<p class="clients-subtitle">
+MARCAS Y EMPRESAS QUE HAN CONFIADO EN MI TRABAJO
+</p>
+
+<div class="clients-slider">
+
+<div class="clients-track track-one">
+
+<img src="assets/marcas/kfc.svg" alt="KFC">
+<img src="assets/marcas/nissan.svg" alt="Nissan">
+<img src="assets/marcas/chevrolet.svg" alt="Chevrolet">
+<img src="assets/marcas/byd.svg" alt="BYD">
+
+<img src="assets/marcas/kfc.svg" alt="KFC">
+<img src="assets/marcas/nissan.svg" alt="Nissan">
+<img src="assets/marcas/chevrolet.svg" alt="Chevrolet">
+<img src="assets/marcas/byd.svg" alt="BYD">
+
+</div>
+
+<div class="clients-track track-two">
+
+<img src="assets/marcas/bancopichincha.svg" alt="Banco Pichincha">
+<img src="assets/marcas/supermaxi.svg" alt="Supermaxi">
+<img src="assets/marcas/megamaxi.svg" alt="Megamaxi">
+<img src="assets/marcas/todohogar.svg" alt="Todo Hogar">
+
+<img src="assets/marcas/bancopichincha.svg" alt="Banco Pichincha">
+<img src="assets/marcas/supermaxi.svg" alt="Supermaxi">
+<img src="assets/marcas/megamaxi.svg" alt="Megamaxi">
+<img src="assets/marcas/todohogar.svg" alt="Todo Hogar">
+
+</div>
+
+</div>
 
 </div>
 
