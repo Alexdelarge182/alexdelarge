@@ -438,84 +438,116 @@ footer a:hover{
 opacity:.6;
 
 }
-/* =========================
-   ABOUT
-========================= */
-
 .about-section{
-    padding:80px 5%;
 
-    display:grid;
-    grid-template-columns:1fr 180px;
-    align-items:center;
-    gap:100px;
+padding:10px 5%;
 
-    max-width:1900px;
-    margin:auto;
-}
+display:grid;
 
-.about-content{
-    display:grid;
-    grid-template-columns:460px minmax(650px,850px);
-    align-items:center;
-    gap:100px;
-}
+grid-template-columns:
+500px
+minmax(650px,800px)
+    180px;
 
-.about-photo img{
-    width:100%;
-    max-width:460px;
-    display:block;
-    border-radius:0;
-}
+align-items:center;
 
-.about-text{
-    max-width:850px;
-}
+gap:80px;
 
-.about-text p{
-    font-size:2rem;
-    line-height:1.45;
-    color:#d0d0d0;
-    margin-bottom:50px;
+max-width:1800px;
+
+margin:auto;
+
 }
 
 .about-title{
-    writing-mode:vertical-rl;
-    transform:rotate(180deg);
 
-    font-family:'Bebas Neue', sans-serif;
-    font-size:11rem;
-    letter-spacing:4px;
+writing-mode:vertical-rl;
 
-    color:rgba(255,255,255,.10);
+transform:rotate(180deg);
 
-    transition:.4s ease;
-    user-select:none;
+font-family:'Bebas Neue', sans-serif;
+
+font-size:6rem;
+
+letter-spacing:4px;
+
+color:rgba(255,255,255,.10);
+
+transition:.4s ease;
+
+user-select:none;
+grid-column:3;
+
 }
 
 .about-title:hover{
-    color:rgba(255,255,255,.28);
+
+color:rgba(255,255,255,.28);
+
+}
+
+.about-content{
+
+display:contents;
+
+}
+
+.about-text{
+
+max-width:950px;
+grid-column:2;
+
+}
+
+.about-text p{
+
+font-size:2rem;
+
+line-height:1.35;
+
+color:#d0d0d0;
+
+margin-bottom:50px;
+
+}
+
+.about-photo img{
+
+width:100%;
+
+max-width:400px;
+
+display:block;
+
+border-radius:0;
+grid-column:1;
+
 }
 
 .about-btn{
-    display:inline-block;
 
-    margin-top:50px;
-    width:220px;
+display:inline-block;
 
-    text-align:center;
+margin-top:50px;
 
-    padding:20px 40px;
+width:220px;
 
-    border:1px solid rgba(255,255,255,.15);
+text-align:center;
 
-    text-decoration:none;
-    color:white;
+padding:20px 40px;
 
-    letter-spacing:3px;
-    font-size:.8rem;
+border:1px solid rgba(255,255,255,.15);
 
-    transition:.3s;
+text-decoration:none;
+
+color:white;
+
+letter-spacing:3px;
+
+font-size:.8rem;
+
+transition:.3s;
+
 }
 
 @media(max-width:1200px){
