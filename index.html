@@ -438,15 +438,15 @@ footer a:hover{
 opacity:.6;
 
 }
+/* =========================
+   ABOUT
+========================= */
+
 .about-section{
-    padding:60px 5%;
+    padding:80px 5%;
+
     display:grid;
-
-    grid-template-columns:
-        460px
-        minmax(650px,1fr)
-        180px;
-
+    grid-template-columns:1fr 180px;
     align-items:center;
     gap:100px;
 
@@ -455,12 +455,10 @@ opacity:.6;
 }
 
 .about-content{
-    display:contents;
-}
-
-/* FOTO */
-.about-photo{
-    grid-column:1;
+    display:grid;
+    grid-template-columns:460px minmax(650px,850px);
+    align-items:center;
+    gap:100px;
 }
 
 .about-photo img{
@@ -470,9 +468,7 @@ opacity:.6;
     border-radius:0;
 }
 
-/* TEXTO */
 .about-text{
-    grid-column:2;
     max-width:850px;
 }
 
@@ -483,10 +479,7 @@ opacity:.6;
     margin-bottom:50px;
 }
 
-/* TÍTULO */
 .about-title{
-    grid-column:3;
-
     writing-mode:vertical-rl;
     transform:rotate(180deg);
 
@@ -504,7 +497,6 @@ opacity:.6;
     color:rgba(255,255,255,.28);
 }
 
-/* BOTÓN */
 .about-btn{
     display:inline-block;
 
