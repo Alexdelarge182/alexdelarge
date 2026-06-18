@@ -438,116 +438,102 @@ footer a:hover{
 opacity:.6;
 
 }
+/* =========================
+   ABOUT
+========================= */
+
 .about-section{
+    padding:90px 5%;
 
-padding:10px 5%;
+    display:grid;
+    grid-template-columns:
+        320px
+        minmax(700px,1fr)
+        180px;
 
-display:grid;
+    align-items:center;
+    gap:100px;
 
-grid-template-columns:
-500px
-minmax(650px,800px)
-    180px;
-
-align-items:center;
-
-gap:80px;
-
-max-width:1800px;
-
-margin:auto;
-
-}
-
-.about-title{
-
-writing-mode:vertical-rl;
-
-transform:rotate(180deg);
-
-font-family:'Bebas Neue', sans-serif;
-
-font-size:6rem;
-
-letter-spacing:4px;
-
-color:rgba(255,255,255,.10);
-
-transition:.4s ease;
-
-user-select:none;
-grid-column:3;
-
-}
-
-.about-title:hover{
-
-color:rgba(255,255,255,.28);
-
+    width:100%;
+    max-width:1900px;
+    margin:auto;
 }
 
 .about-content{
-
-display:contents;
-
+    display:contents;
 }
 
-.about-text{
+/* FOTO */
 
-max-width:950px;
-grid-column:2;
-
-}
-
-.about-text p{
-
-font-size:2rem;
-
-line-height:1.35;
-
-color:#d0d0d0;
-
-margin-bottom:50px;
-
+.about-photo{
+    justify-self:center;
 }
 
 .about-photo img{
+    width:320px;
+    height:320px;
 
-width:100%;
+    object-fit:cover;
+    object-position:center top;
 
-max-width:400px;
-
-display:block;
-
-border-radius:0;
-grid-column:1;
-
+    display:block;
+    border-radius:50%;
 }
 
+/* TEXTO */
+
+.about-text{
+    max-width:none;
+}
+
+.about-text p{
+    font-size:1.45rem;
+    line-height:1.6;
+    color:#d0d0d0;
+    margin-bottom:40px;
+}
+
+/* TÍTULO */
+
+.about-title{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+
+    font-family:'Bebas Neue', sans-serif;
+    font-size:6rem;
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.10);
+
+    transition:color .4s ease;
+    user-select:none;
+}
+
+.about-title:hover{
+    color:rgba(255,255,255,.28);
+}
+
+/* BOTÓN */
+
 .about-btn{
+    display:inline-block;
 
-display:inline-block;
+    margin-top:20px;
+    width:220px;
 
-margin-top:50px;
+    text-align:center;
 
-width:220px;
+    padding:20px 40px;
 
-text-align:center;
+    border:1px solid rgba(255,255,255,.15);
 
-padding:20px 40px;
+    text-decoration:none;
+    color:white;
 
-border:1px solid rgba(255,255,255,.15);
+    letter-spacing:3px;
+    font-size:.8rem;
 
-text-decoration:none;
-
-color:white;
-
-letter-spacing:3px;
-
-font-size:.8rem;
-
-transition:.3s;
-
+    transition:.3s ease;
 }
 
 @media(max-width:1200px){
