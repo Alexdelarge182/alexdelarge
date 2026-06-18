@@ -439,115 +439,74 @@ opacity:.6;
 
 }
 .about-section{
-
-padding:10px 5%;
-
-display:grid;
-
-grid-template-columns:
-500px
-minmax(650px,800px)
-    180px;
-
-align-items:center;
-
-gap:80px;
-
-max-width:1800px;
-
-margin:auto;
-
+    padding:60px 5%;
+    display:grid;
+    grid-template-columns:180px 1fr 450px;
+    align-items:center;
+    gap:100px;
+    max-width:1800px;
+    margin:auto;
 }
 
 .about-title{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
 
-writing-mode:vertical-rl;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:11rem;
+    letter-spacing:4px;
 
-transform:rotate(180deg);
+    color:rgba(255,255,255,.10);
 
-font-family:'Bebas Neue', sans-serif;
-
-font-size:6rem;
-
-letter-spacing:4px;
-
-color:rgba(255,255,255,.10);
-
-transition:.4s ease;
-
-user-select:none;
-grid-column:3;
-
+    transition:.4s ease;
+    user-select:none;
 }
 
 .about-title:hover{
-
-color:rgba(255,255,255,.28);
-
+    color:rgba(255,255,255,.28);
 }
 
 .about-content{
-
-display:contents;
-
+    display:contents;
 }
 
 .about-text{
-
-max-width:950px;
-grid-column:2;
-
+    max-width:800px;
 }
 
 .about-text p{
-
-font-size:2rem;
-
-line-height:1.35;
-
-color:#d0d0d0;
-
-margin-bottom:50px;
-
+    font-size:2rem;
+    line-height:1.45;
+    color:#d0d0d0;
+    margin-bottom:50px;
 }
 
 .about-photo img{
-
-width:100%;
-
-max-width:400px;
-
-display:block;
-
-border-radius:0;
-grid-column:1;
-
+    width:100%;
+    max-width:460px;
+    display:block;
+    border-radius:0;
 }
 
 .about-btn{
+    display:inline-block;
 
-display:inline-block;
+    margin-top:50px;
+    width:220px;
 
-margin-top:50px;
+    text-align:center;
 
-width:220px;
+    padding:20px 40px;
 
-text-align:center;
+    border:1px solid rgba(255,255,255,.15);
 
-padding:20px 40px;
+    text-decoration:none;
+    color:white;
 
-border:1px solid rgba(255,255,255,.15);
+    letter-spacing:3px;
+    font-size:.8rem;
 
-text-decoration:none;
-
-color:white;
-
-letter-spacing:3px;
-
-font-size:.8rem;
-
-transition:.3s;
-
+    transition:.3s;
 }
 
 @media(max-width:1200px){
