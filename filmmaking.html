@@ -369,48 +369,37 @@ border:none;
 
 .projects-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:8px;
-}
-/* FILMMAKING MOBILE */
-
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:6px;
+    grid-template-columns:1fr;
+    gap:25px;
 }
 
 .project-card{
-    padding:0;
-    border:none;
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
 }
-
-/* Ocultamos texto */
 
 .project-card h3,
 .project-card h4,
 .project-description,
 .project-role{
-    display:none;
-}
-.video-container iframe{
     display:block;
 }
 
-.projects-grid{
-    padding:0;
-}
-/* Miniaturas */
-
 .video-container{
-    margin:0;
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    margin:25px 0;
+    overflow:hidden;
 }
 
-/* quitar separadores */
-
-.project-card hr{
-    display:none;
+.video-container iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
 }
+
 }
 
 /* =========================
