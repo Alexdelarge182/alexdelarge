@@ -368,11 +368,43 @@ border:none;
 @media(max-width:900px){
 
 .projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+/* FILMMAKING MOBILE */
 
-grid-template-columns:1fr;
-
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
 }
 
+.project-card{
+    padding:8px;
+    border:none;
+}
+
+/* Ocultamos texto */
+
+.project-card h3,
+.project-card h4,
+.project-description,
+.project-role{
+    display:none;
+}
+
+/* Miniaturas */
+
+.video-container{
+    margin:0;
+}
+
+/* quitar separadores */
+
+.project-card hr{
+    display:none;
+}
 }
 
 /* =========================
