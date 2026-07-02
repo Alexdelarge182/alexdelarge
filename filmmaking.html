@@ -497,6 +497,64 @@ color:black;
         0 18px 45px rgba(0,0,0,.45);
 }
 /* =========================
+   REELS GRID
+========================= */
+
+.reels-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+    max-width:1100px;
+    margin:0 auto 80px;
+}
+
+.reel-thumb{
+    position:relative;
+    display:block;
+    aspect-ratio:9/16;
+    overflow:hidden;
+    background:#0b0b0b;
+    text-decoration:none;
+}
+
+.reel-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.35s ease;
+}
+
+.reel-thumb span{
+    position:absolute;
+    left:12px;
+    bottom:12px;
+    z-index:2;
+
+    color:white;
+    font-size:.65rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    opacity:.85;
+}
+
+.reel-thumb::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 55%,
+        rgba(0,0,0,.75)
+    );
+    z-index:1;
+}
+
+.reel-thumb:hover img{
+    transform:scale(1.04);
+    opacity:.85;
+}
+/* =========================
 SKILLS
 ========================= */
 
@@ -646,6 +704,17 @@ letter-spacing:6px;
 
 height:220px;
 
+}
+/* REELS MOBILE */
+
+.reels-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:3px;
+    margin-bottom:50px;
+}
+
+.reel-thumb span{
+    display:none;
 }
 /* WHATSAPP MÓVIL */
 
@@ -811,87 +880,47 @@ SKILLS
 Producción audiovisual para marcas, campañas publicitarias y comunicación corporativa.
 </p>
 
-<div class="projects-grid">
+<div class="reels-grid">
 
-<div class="project">
-<h3>CHEVROLET</h3>
-<h4>Trailblazer</h4>
-<p class="project-description">Producción audiovisual orientada al posicionamiento y promoción de Chevrolet Trailblazer.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/2-0Aj4o_5Xk" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/2-0Aj4o_5Xk" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Chevrolet.jpg" alt="Chevrolet Bolt">
+<span>CHEVROLET</span>
+</a>
 
-<div class="project">
-<h3>NISSAN</h3>
-<h4>Esto es Emocionante</h4>
-<p class="project-description">Campaña publicitaria enfocada en posicionamiento de marca y experiencia de conducción.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/YR5ED3-1cwg" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/YR5ED3-1cwg" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Nissan2.jpg" alt="Nissan Esto es Emocionante">
+<span>NISSAN</span>
+</a>
 
-<div class="project">
-<h3>NISSAN</h3>
-<h4>Esto es Nissan</h4>
-<p class="project-description">Campaña audiovisual enfocada en la identidad de marca, innovación y experiencia Nissan.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/XGhOp5j_J2Y" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/XGhOp5j_J2Y" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Nissan.jpg" alt="Nissan Esto es Nissan">
+<span>NISSAN</span>
+</a>
 
-<div class="project">
-<h3>KFC</h3>
-<h4>Autorapi</h4>
-<p class="project-description">Campaña audiovisual desarrollada para la promoción del servicio Autorapi de KFC.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/DFT_8XA3vSk" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/pQuK-L3iXBE" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/kfc.jpg" alt="KFC Autorapi">
+<span>KFC</span>
+</a>
 
-<div class="project">
-<h3>BANCO PICHINCHA</h3>
-<h4>Nómina Confianza</h4>
-<p class="project-description">Campaña audiovisual desarrollada para promover el servicio Nómina Confianza de Banco Pichincha.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/ufke7jJqY9A" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/ufke7jJqY9A" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/pichincha.jpg" alt="Banco Pichincha Nómina Confianza">
+<span>BANCO PICHINCHA</span>
+</a>
 
-<div class="project">
-<h3>PRODUBANCO</h3>
-<h4>Transferencias App</h4>
-<p class="project-description">Campaña audiovisual para la promoción de funcionalidades digitales y experiencia de usuario.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/I03FfGGxZPo" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/I03FfGGxZPo" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/prudubanco.jpg" alt="Produbanco Transferencias App">
+<span>PRODUBANCO</span>
+</a>
 
-<div class="project">
-<h3>BYD</h3>
-<h4>Eléctricos</h4>
-<p class="project-description">Campaña audiovisual enfocada en movilidad eléctrica, innovación y sostenibilidad.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/isrogvxlL18" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/isrogvxlL18" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Byd.jpg" alt="BYD Eléctricos">
+<span>BYD</span>
+</a>
 
-<div class="project">
-<h3>RM</h3>
-<h4>Urban</h4>
-<p class="project-description">Producción audiovisual para comunicación de marca y posicionamiento comercial.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/eFxeTjTi1cM" allowfullscreen></iframe>
-</div>
-<p class="project-role">Coordinador de Producción Audiovisual</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/eFxeTjTi1cM" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Rm.jpg" alt="RM Urban">
+<span>RM</span>
+</a>
 
 </div>
 
@@ -905,17 +934,42 @@ Producción audiovisual para marcas, campañas publicitarias y comunicación cor
 Contenido audiovisual para arquitectura, interiorismo y promoción inmobiliaria.
 </p>
 
-<div class="projects-grid">
+<div class="reels-grid">
 
-<div class="project">
-<h3>DISEÑART ARQUITECTOS</h3>
-<h4>Contenido Arquitectónico e Inmobiliario</h4>
-<p class="project-description">Producción, grabación y edición de contenido audiovisual para proyectos arquitectónicos e inmobiliarios.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/1usFocCVbRU" allowfullscreen></iframe>
-</div>
-<p class="project-role">Videógrafo y Editor de Video</p>
-</div>
+<a class="reel-thumb" href="https://youtu.be/1usFocCVbRU" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Diseñart.jpg" alt="Diseñart Arquitectos">
+<span>DISEÑART</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/EWr7KPrTOuw?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Terrazashort.jpg" alt="Terraza Short">
+<span>TERRAZA SHORT</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/DQggMZtNfAc?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Terraza.jpg" alt="Terraza">
+<span>TERRAZA</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/jXGhVAhwJNw?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Casaumshort.jpg" alt="Casa UM Short">
+<span>CASA UM</span>
+</a>
+
+<a class="reel-thumb" href="https://youtu.be/AvQ9aib-Hj0" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/casaum.jpg" alt="Casa UM">
+<span>CASA UM</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/0VKCEW-nFbE?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/casaum2.jpg" alt="Casa UM Short 2">
+<span>CASA UM 2</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/8pG7kylGELk?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/antesydespues.jpg" alt="Consultorio antes y después">
+<span>ANTES / DESPUÉS</span>
+</a>
 
 </div>
 
@@ -929,17 +983,17 @@ Contenido audiovisual para arquitectura, interiorismo y promoción inmobiliaria.
 Contenido audiovisual y piezas verticales para redes sociales, marcas y comunicación digital.
 </p>
 
-<div class="projects-grid">
+<div class="reels-grid">
 
-<div class="project">
-<h3>SORELLE ART</h3>
-<h4>Contenido para Redes Sociales</h4>
-<p class="project-description">Producción audiovisual, grabación y edición de contenido para redes sociales orientado al posicionamiento digital de marca.</p>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/WNIFyQtgZAw" allowfullscreen></iframe>
-</div>
-<p class="project-role">Videógrafo y Editor de Video</p>
-</div>
+<a class="reel-thumb" href="https://youtube.com/shorts/WNIFyQtgZAw?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Sorelle.jpg" alt="Sorelle Art">
+<span>SORELLE ART</span>
+</a>
+
+<a class="reel-thumb" href="https://youtube.com/shorts/xpLvurqBA3E?feature=share" target="_blank" rel="noopener noreferrer">
+<img src="assets/thumbs/Workshop.png" alt="Workshop">
+<span>WORKSHOP</span>
+</a>
 
 </div>
 
