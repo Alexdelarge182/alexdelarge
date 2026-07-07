@@ -443,7 +443,7 @@ opacity:.6;
 ========================= */
 
 .about-section{
-    padding:70px 5% 40px;
+    padding:90px 5%;
 
     display:grid;
     grid-template-columns:
@@ -487,10 +487,16 @@ opacity:.6;
 }
 
 .about-text p{
-    font-size:1.45rem;
-    line-height:1.6;
+
+    font-size:1.28rem;
+    line-height:1.9;
+
     color:#d0d0d0;
-    margin-bottom:40px;
+
+    max-width:980px;
+
+    margin-bottom:28px;
+
 }
 
 /* TÍTULO */
@@ -987,100 +993,467 @@ padding:80px 7%;
 
 }
 
-/* ABOUT */
+/* =========================
+   SOBRE MI
+========================= */
 
-.about-section{
+.about{
 
-display:flex;
-
-flex-direction:column;
-
-gap:40px;
-
-padding:80px 7%;
-
-text-align:center;
-
-}
-
-.about-title{
-
-writing-mode:horizontal-tb;
-
-transform:none;
-
-font-size:4rem;
-
-letter-spacing:4px;
-
-}
-
-.about-content{
-
-display:flex;
-
-flex-direction:column-reverse;
-
-gap:40px;
-
-text-align:center;
-
-}
-
-.about-text p{
-
-font-size:1.1rem;
-
-line-height:1.8;
-
-}
-
-.about-photo img{
-
-width:220px;
-
-max-width:100%;
+max-width:850px;
 
 margin:auto;
 
+text-align:center;
+
+line-height:2;
+
+font-size:1.1rem;
+
+color:#d0d0d0;
+
 }
-/* CLIENTES */
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+height:650px;
+
+object-fit:cover;
+
+transition:.5s;
+
+cursor:pointer;
+
+}
+.section-button{
+
+text-align:center;
+
+margin-top:50px;
+
+}
+
+.explore-btn{
+
+display:inline-block;
+
+padding:18px 40px;
+
+border:1px solid rgba(255,255,255,.15);
+
+text-decoration:none;
+
+color:white;
+
+letter-spacing:3px;
+
+font-size:.8rem;
+
+transition:.3s;
+
+}
+
+.explore-btn:hover{
+
+background:white;
+
+color:black;
+
+}
+.gallery img:hover{
+
+transform:scale(1.03);
+
+}
+
+/* =========================
+   BOTÓN PORTAFOLIO
+========================= */
+
+.portfolio-link{
+
+margin-top:60px;
+text-align:center;
+
+}
+
+.portfolio-link a{
+
+color:white;
+text-decoration:none;
+
+letter-spacing:3px;
+font-size:.8rem;
+
+text-transform:uppercase;
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:18px 28px;
+
+transition:.3s;
+
+}
+
+.portfolio-link a:hover{
+
+background:white;
+color:black;
+
+}
+.cv-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:3px;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:18px 28px;
+
+transition:.3s;
+
+}
+
+.cv-btn:hover{
+
+background:white;
+
+color:black;
+
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+padding:80px 20px;
+
+text-align:center;
+
+border-top:1px solid #1a1a1a;
+
+}
+
+footer p{
+
+margin-bottom:15px;
+
+}
+
+footer a{
+
+color:white;
+text-decoration:none;
+
+}
+
+footer a:hover{
+
+opacity:.6;
+
+}
+/* =========================
+   ABOUT
+========================= */
+
+.about-section{
+    padding:70px 5% 40px;
+
+    display:grid;
+    grid-template-columns:
+        320px
+        minmax(700px,1fr)
+        180px;
+
+    align-items:start;
+    gap:100px;
+
+    width:100%;
+    max-width:1900px;
+    margin:auto;
+}
+
+.about-content{
+    display:contents;
+}
+
+/* FOTO */
+
+.about-photo{
+    justify-self:center;
+}
+
+.about-photo img{
+    width:320px;
+    height:320px;
+
+    object-fit:cover;
+    object-position:center top;
+
+    display:block;
+    border-radius:50%;
+}
+
+/* TEXTO */
+
+.about-text{
+    max-width:none;
+}
+
+.about-text p{
+    font-size:1.45rem;
+    line-height:1.6;
+    color:#d0d0d0;
+    margin-bottom:40px;
+}
+
+/* TÍTULO */
+
+.about-title{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+
+    font-family:'Bebas Neue', sans-serif;
+    font-size:6rem;
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.10);
+
+    transition:color .4s ease;
+    user-select:none;
+}
+
+.about-title:hover{
+    color:rgba(255,255,255,.28);
+}
+
+/* BOTÓN */
+
+.about-btn{
+    display:inline-block;
+
+    margin-top:20px;
+    width:220px;
+
+    text-align:center;
+
+    padding:20px 40px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-decoration:none;
+    color:white;
+
+    letter-spacing:3px;
+    font-size:.8rem;
+
+    transition:.3s ease;
+}
+
+@media(max-width:1200px){
+
+.gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+
+.whatsapp-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    z-index:999;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.whatsapp-btn img{
+    width:36px;
+    height:36px;
+}
+
+.whatsapp-btn:hover{
+    transform:
+        translateY(-5px)
+        scale(1.08);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+}
+/* =========================
+   CLIENTES
+========================= */
 
 .clients-section{
-    display:flex;
-    flex-direction:column;
-    gap:50px;
-    text-align:center;
-    padding:90px 7%;
+    padding:90px 5%;
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:80px;
+    align-items:flex-start;
+    overflow:hidden;
 }
 
 .clients-title{
-    writing-mode:horizontal-tb;
-    transform:none;
-    font-size:4rem;
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+
+    font-family:'Bebas Neue', sans-serif;
+    font-size:6rem;
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.10);
+
+    transition:.4s ease;
+    user-select:none;
+}
+
+.clients-title:hover{
+    color:rgba(255,255,255,.28);
+}
+
+.clients-content{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    padding-top:40px;
 }
 
 .clients-subtitle{
-    font-size:.7rem;
-    letter-spacing:3px;
-    margin-top:40px;
+    font-size:.75rem;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.45);
+    text-transform:uppercase;
+
+    margin:45px auto 0;
+    text-align:center;
+    white-space:nowrap;
+    transform:translateX(-120px);
+
+    max-width:none;
 }
 
-.clients-track{
-    gap:60px;
-}
-
-.track-one{
-    margin-bottom:45px;
-}
-
-.clients-track img{
-    height:32px;
+.clients-slider{
+    position:relative;
+    overflow:hidden;
 }
 
 .clients-slider::before,
 .clients-slider::after{
-    width:70px;
+    content:"";
+    position:absolute;
+    top:0;
+    width:180px;
+    height:100%;
+    z-index:2;
+    pointer-events:none;
+}
+
+.clients-slider::before{
+    left:0;
+    background:
+    linear-gradient(
+        to right,
+        #050505,
+        transparent
+    );
+}
+
+.clients-slider::after{
+    right:0;
+    background:
+    linear-gradient(
+        to left,
+        #050505,
+        transparent
+    );
+}
+
+.clients-track{
+    display:flex;
+    align-items:center;
+    gap:140px;
+    width:max-content;
+}
+
+.track-one{
+    margin-bottom:45px;
+    animation:slideRight 32s linear infinite;
+}
+
+.track-two{
+    animation:slideLeft 36s linear infinite;
+}
+
+.clients-slider:hover .clients-track{
+    animation-play-state:paused;
+}
+
+.clients-track img{
+    height:58px;
+    width:auto;
+
+    opacity:.35;
+    filter:grayscale(100%);
+
+    transition:
+    opacity .35s ease,
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.clients-track img:hover{
+    opacity:1;
+    filter:grayscale(0%);
+    transform:
+    translateY(-4px)
+    scale(1.05);
 }
 /* GALERÍA */
 
