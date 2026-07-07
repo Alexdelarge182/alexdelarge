@@ -442,16 +442,12 @@ opacity:.6;
    ABOUT
 ========================= */
 
-/* =========================
-   ABOUT
-========================= */
-
 .about-section{
     padding:70px 5%;
     display:grid;
-    grid-template-columns:280px 1fr 120px;
+    grid-template-columns:260px 1fr 120px;
     align-items:center;
-    gap:60px;
+    gap:70px;
     width:100%;
     max-width:1900px;
     margin:auto;
@@ -463,6 +459,7 @@ opacity:.6;
 
 .about-photo{
     grid-column:1;
+    grid-row:1;
     justify-self:center;
 }
 
@@ -477,6 +474,7 @@ opacity:.6;
 
 .about-text{
     grid-column:2;
+    grid-row:1;
     max-width:1050px;
     display:flex;
     flex-direction:column;
@@ -491,11 +489,15 @@ opacity:.6;
 
 .about-title{
     grid-column:3;
+    grid-row:1;
+
     writing-mode:vertical-rl;
     transform:rotate(180deg);
+
     font-family:'Bebas Neue', sans-serif;
     font-size:6rem;
     letter-spacing:4px;
+
     color:rgba(255,255,255,.10);
     transition:color .4s ease;
     user-select:none;
