@@ -856,6 +856,43 @@ grid-template-columns:repeat(2,1fr);
     color:black;
 
 }
+.video-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+.video-modal.active{
+    display:flex;
+}
+
+.video-modal-content{
+    position:relative;
+    width:90%;
+    max-width:1000px;
+    aspect-ratio:16/9;
+}
+
+.video-modal-content iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+.video-modal-close{
+    position:absolute;
+    top:-50px;
+    right:0;
+    background:none;
+    border:none;
+    color:white;
+    font-size:2.5rem;
+    cursor:pointer;
+}
 /* =========================
    MOBILE
 ========================= */
