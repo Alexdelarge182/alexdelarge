@@ -1397,6 +1397,27 @@ allowfullscreen>
 
 </div>
 </div>
+<script>
+const filmCards = document.querySelectorAll('.film-preview-card');
+const videoModal = document.getElementById('videoModal');
+const videoFrame = document.getElementById('videoModalFrame');
+
+filmCards.forEach(card => {
+    card.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const videoURL = this.getAttribute('data-video');
+
+        videoFrame.src = videoURL + '?autoplay=1';
+        videoModal.classList.add('active');
+    });
+});
+
+function closeVideoModal(){
+    videoModal.classList.remove('active');
+    videoFrame.src = '';
+}
+</script>
 </body>
 
 </html>
